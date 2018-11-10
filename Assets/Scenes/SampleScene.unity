@@ -1212,6 +1212,7 @@ GameObject:
   - component: {fileID: 359298787}
   - component: {fileID: 359298786}
   - component: {fileID: 359298788}
+  - component: {fileID: 359298789}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1260,6 +1261,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTowerPrefab: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c,
     type: 2}
+--- !u!114 &359298789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359298785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad55d4d5f6f2a64683c1a258794e65c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 1000
 --- !u!1 &490676332
 GameObject:
   m_ObjectHideFlags: 0

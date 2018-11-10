@@ -41,5 +41,8 @@ public class Bullet : MonoBehaviour {
 
         Destroy(target.gameObject);
         Destroy(gameObject);
+
+        PlayerStats.money += 50;
+        Debug.Log("Enemy destroyed! Money is now: " + PlayerStats.money);
     }
 }
