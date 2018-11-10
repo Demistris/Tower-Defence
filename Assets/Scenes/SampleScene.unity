@@ -548,7 +548,7 @@ MonoBehaviour:
   buttonPosition: {x: 0, y: 5, z: 7}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &177589360
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   buttonPosition: {x: 1, y: 5, z: 5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1001 &185767289
 Prefab:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ MonoBehaviour:
   buttonPosition: {x: 3, y: 5, z: 5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &320872343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1362,7 @@ MonoBehaviour:
   buttonPosition: {x: 0.5, y: 5, z: 7.5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1001 &501132799
 Prefab:
   m_ObjectHideFlags: 0
@@ -1432,8 +1432,7 @@ Prefab:
         type: 2}
       propertyPath: tower
       value: 
-      objectReference: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c,
-        type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e6df9ac8b4789c4490d0b373d6d7ebf, type: 2}
   m_IsPrefabAsset: 0
@@ -2007,7 +2006,7 @@ MonoBehaviour:
   buttonPosition: {x: 1, y: 5, z: 7.5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &690358921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2110,7 +2109,7 @@ MonoBehaviour:
   buttonPosition: {x: -2, y: 5, z: 8}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &702795803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,7 +2552,7 @@ MonoBehaviour:
   buttonPosition: {x: 2, y: 5, z: 7}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &774461288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2655,7 @@ MonoBehaviour:
   buttonPosition: {x: 0, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &775588775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3126,7 +3125,7 @@ MonoBehaviour:
   buttonPosition: {x: 2, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &951230315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,7 +3925,7 @@ MonoBehaviour:
   buttonPosition: {x: 0, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &1308098490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,7 +5184,7 @@ MonoBehaviour:
   buttonPosition: {x: -1, y: 5, z: 8}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &1852000349
 GameObject:
   m_ObjectHideFlags: 0
@@ -5288,7 +5287,7 @@ MonoBehaviour:
   buttonPosition: {x: 1, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c, type: 2}
+  tower: {fileID: 0}
 --- !u!1 &1913740584
 GameObject:
   m_ObjectHideFlags: 0

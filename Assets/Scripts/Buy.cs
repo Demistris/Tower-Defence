@@ -18,6 +18,8 @@ public class Buy : MonoBehaviour {
     {
         GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
         standardTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
-        gameObject.SetActive(false);
+        Destroy(gameObject);
+        //przypisuje prefab standartTower do public GameObject tower
+        targetSpot.tower = standardTower;
     }
 }

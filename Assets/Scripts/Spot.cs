@@ -11,6 +11,7 @@ public class Spot : MonoBehaviour
     public GameObject buyButton;
     public GameObject canvas;
     public GameObject tower;
+    private GameObject spawnedBuyButton;
 
     private Renderer rend;
     private Color startColor;
@@ -35,7 +36,20 @@ public class Spot : MonoBehaviour
             return;
         }
 
-        Instantiate(buyButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+        if (CanShowBuyButton())
+        {
+            spawnedBuyButton = Instantiate(buyButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+        }
+    }
+
+    private bool CanShowBuyButton()
+    {
+        return IsBuyButtonVisible() == false;
+    }
+
+    private bool IsBuyButtonVisible()
+    {
+        return spawnedBuyButton != null;
     }
 
     void OnMouseEnter()
