@@ -81,7 +81,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<b>BUY</b>
 
-    $20'
+    $200'
 --- !u!114 &114424616720485674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,7 +197,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1288889826160334}
   m_LocalRotation: {x: -0.13052624, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -104.13357}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224643823118073334}
@@ -206,7 +206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -573, y: 337}
+  m_AnchoredPosition: {x: 28.642944, y: 0.5}
   m_SizeDelta: {x: 98.09, y: 63.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224643823118073334

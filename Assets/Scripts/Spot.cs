@@ -40,6 +40,11 @@ public class Spot : MonoBehaviour
         {
             spawnedBuyButton = Instantiate(buyButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
         }
+
+        else if(spawnedBuyButton != null)
+        {
+            Destroy(spawnedBuyButton);
+        }
     }
 
     private bool CanShowBuyButton()
