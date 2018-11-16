@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
     public float speed = 10f;
-
-    public int health = 100;
-
+    public float startHealth = 100;
+    private float health;
     public int value = 10;
 
     public GameObject deathEffect;
+
+    public Image healthBar;
 
     private Transform target;
     private int wavePointIndex = 0;
@@ -18,11 +20,14 @@ public class EnemyMovement : MonoBehaviour {
 	void Start ()
     {
         target = Waypoints.points[0];
+        health = startHealth;
 	}
 
     public void TakeDamage(int amount)
     {
         health -= amount;
+
+        healthBar.fillAmount = health / startHealth;
 
         if(health <= 0)
         {
