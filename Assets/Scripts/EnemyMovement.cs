@@ -48,6 +48,12 @@ public class EnemyMovement : MonoBehaviour {
 	
 	void Update ()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         Vector3 direction = target.position - transform.position;
         transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
 

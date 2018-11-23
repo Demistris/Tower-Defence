@@ -28,6 +28,12 @@ public class Spot : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         buyButton.GetComponent<Buy>().targetSpot = this;
 
         if (tower != null)
@@ -59,6 +65,12 @@ public class Spot : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         rend.material.color = hoverColor;
     }
 

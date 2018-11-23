@@ -14,7 +14,13 @@ public class SpawnEnemyButton : MonoBehaviour {
 
     private void Update()
     {
-        if(GameObject.FindGameObjectsWithTag("EnemyEasy").Length == 0)
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
+        if (GameObject.FindGameObjectsWithTag("EnemyEasy").Length == 0)
         {
             button.SetActive(true);
         }

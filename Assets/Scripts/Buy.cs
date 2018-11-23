@@ -14,8 +14,22 @@ public class Buy : MonoBehaviour {
         buildManager = BuildManager.instance;
     }
 
+    private void Update()
+    {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+    }
+
     public void onClick()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
         Debug.Log("Money: " + PlayerStats.money);
 
         if (PlayerStats.money < 200)
@@ -26,7 +40,6 @@ public class Buy : MonoBehaviour {
 
         PlayerStats.money -= 200;
 
-        Debug.Log("Tower build! Money left: " + PlayerStats.money);
 
         GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
         standardTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);

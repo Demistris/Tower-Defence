@@ -14,6 +14,8 @@ public class PlayerStats : MonoBehaviour {
     public Text textMoney;
     public Text textLives;
 
+    public static int rounds;
+
     void Start ()
     {
         money = startMoney;
@@ -21,9 +23,17 @@ public class PlayerStats : MonoBehaviour {
 
         textMoney.text = "Money: " + PlayerStats.money;
         textLives.text = "Lives: " + PlayerStats.lives;
+
+        rounds = 0;
     }
     void Update()
     {
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         textMoney.text = "Money: " + PlayerStats.money;
         textLives.text = "Lives: " + PlayerStats.lives;
     }
