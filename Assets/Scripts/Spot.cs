@@ -12,6 +12,8 @@ public class Spot : MonoBehaviour
     public GameObject canvas;
     public GameObject tower;
     private GameObject spawnedBuyButton;
+    public GameObject upgradeButton;
+    private GameObject spawnedUpgradeButton;
 
     private Renderer rend;
     private Color startColor;
@@ -38,8 +40,12 @@ public class Spot : MonoBehaviour
 
         if (tower != null)
         {
-            Debug.Log("Can't build in here!");
-            return;
+            spawnedUpgradeButton = Instantiate(upgradeButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+        }
+
+        else if(spawnedUpgradeButton != null)
+        {
+            Destroy(spawnedUpgradeButton);
         }
 
         if (CanShowBuyButton())

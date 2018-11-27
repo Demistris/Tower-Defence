@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buy : MonoBehaviour {
+public class Upgrade : MonoBehaviour {
 
-    public GameObject standardTower;
+    public GameObject upgradedTower;
     public Vector3 positionOffset;
     public Spot targetSpot;
     BuildManager buildManager;
 
-	void Start ()
+    void Start ()
     {
         buildManager = BuildManager.instance;
     }
-
-    private void Update()
+	
+	void Update ()
     {
         if (GameManager.gameIsOver)
         {
@@ -31,19 +31,21 @@ public class Buy : MonoBehaviour {
             return;
         }
 
-        if (PlayerStats.money < 200)
+        if (PlayerStats.money < 150)
         {
+            Debug.Log("Not enough money to upgrade that!");
             return;
         }
 
-        PlayerStats.money -= 200;
+        PlayerStats.money -= 150;
 
 
+        ///////dorobiccccc
         GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
-        standardTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
+        upgradedTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
         Destroy(gameObject);
 
-        //przypisuje prefab standardTower do public GameObject tower
-        targetSpot.tower = standardTower;
+        //przypisuje prefab upgradedTower do public GameObject tower
+        targetSpot.tower = upgradedTower;
     }
 }
