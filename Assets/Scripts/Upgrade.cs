@@ -39,8 +39,6 @@ public class Upgrade : MonoBehaviour {
 
         PlayerStats.money -= 150;
 
-
-        ///////dorobiccccc
         GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
         upgradedTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
         Destroy(gameObject);

@@ -20,6 +20,8 @@ public class Spot : MonoBehaviour
 
     BuildManager buildManager;
 
+    int tmp = 0;
+
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -40,22 +42,30 @@ public class Spot : MonoBehaviour
 
         if (tower != null)
         {
-            spawnedUpgradeButton = Instantiate(upgradeButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+            if(tmp == 0)
+            {
+                spawnedUpgradeButton = Instantiate(upgradeButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+                tmp = 1;
+            }
+
+            else if (spawnedUpgradeButton != null)
+            {
+                Destroy(spawnedUpgradeButton);
+                tmp = 0;
+            }
         }
 
-        else if(spawnedUpgradeButton != null)
+        if(spawnedUpgradeButton == null)
         {
-            Destroy(spawnedUpgradeButton);
-        }
+            if (CanShowBuyButton())
+            {
+                spawnedBuyButton = Instantiate(buyButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+            }
 
-        if (CanShowBuyButton())
-        {
-            spawnedBuyButton = Instantiate(buyButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
-        }
-
-        else if(spawnedBuyButton != null)
-        {
-            Destroy(spawnedBuyButton);
+            else if (spawnedBuyButton != null)
+            {
+                Destroy(spawnedBuyButton);
+            }
         }
     }
 
