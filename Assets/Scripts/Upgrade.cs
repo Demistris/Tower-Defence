@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Upgrade : MonoBehaviour {
-
-    public GameObject upgradedTower;
+public class Upgrade : MonoBehaviour
+{
     public Vector3 positionOffset;
     public Spot targetSpot;
     BuildManager buildManager;
@@ -39,11 +38,12 @@ public class Upgrade : MonoBehaviour {
 
         PlayerStats.money -= 150;
 
-        GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
-        upgradedTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
+        GameObject towerToBuild = BuildManager.instance.UpgradedTowerPrefab;
+        GameObject spawnedUpgradedTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
         Destroy(gameObject);
 
-        //przypisuje prefab upgradedTower do public GameObject tower
-        targetSpot.tower = upgradedTower;
+        Destroy(targetSpot.SpawnedTower);
+
+        targetSpot.SpawnedTower = spawnedUpgradedTower;
     }
 }

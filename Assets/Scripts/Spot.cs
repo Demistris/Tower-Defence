@@ -10,7 +10,7 @@ public class Spot : MonoBehaviour
 
     public GameObject buyButton;
     public GameObject canvas;
-    public GameObject tower;
+    public GameObject SpawnedTower;
     private GameObject spawnedBuyButton;
     public GameObject upgradeButton;
     private GameObject spawnedUpgradeButton;
@@ -19,8 +19,6 @@ public class Spot : MonoBehaviour
     private Color startColor;
 
     BuildManager buildManager;
-
-    int tmp = 0;
 
     void Start()
     {
@@ -39,32 +37,31 @@ public class Spot : MonoBehaviour
         }
 
         buyButton.GetComponent<Buy>().targetSpot = this;
+        upgradeButton.GetComponent<Upgrade>().targetSpot = this;
 
-        if (tower != null)
-        {
-            if(tmp == 0)
-            {
-                spawnedUpgradeButton = Instantiate(upgradeButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
-                tmp = 1;
-            }
-
-            else if (spawnedUpgradeButton != null)
-            {
-                Destroy(spawnedUpgradeButton);
-                tmp = 0;
-            }
-        }
-
-        if(spawnedUpgradeButton == null)
+        if (SpawnedTower == null)
         {
             if (CanShowBuyButton())
             {
                 spawnedBuyButton = Instantiate(buyButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
             }
-
             else if (spawnedBuyButton != null)
             {
                 Destroy(spawnedBuyButton);
+            }
+        }
+        else
+        {
+            if(SpawnedTower.GetComponent<Tower>().IsUpgradedVersion == false)
+            {
+                if (spawnedUpgradeButton == null)
+                {
+                    spawnedUpgradeButton = Instantiate(upgradeButton, transform.position + buttonPosition, Quaternion.Euler(75, 0, 0), canvas.transform);
+                }
+                else
+                {
+                    Destroy(spawnedUpgradeButton);
+                }
             }
         }
     }

@@ -718,7 +718,7 @@ MonoBehaviour:
   buttonPosition: {x: 0, y: 5, z: 7}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &177589360
@@ -823,7 +823,7 @@ MonoBehaviour:
   buttonPosition: {x: 1, y: 5, z: 5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1001 &185767289
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   buttonPosition: {x: 3, y: 5, z: 5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &320872343
@@ -1436,7 +1436,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1eb68abbe25f3e40bea61debb79151e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTowerPrefab: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c,
+  StandardTowerPrefab: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c,
+    type: 2}
+  UpgradedTowerPrefab: {fileID: 1329509005940620, guid: 74972bebf621b404a850925b35153ebd,
     type: 2}
 --- !u!114 &359298789
 MonoBehaviour:
@@ -1664,7 +1666,7 @@ MonoBehaviour:
   buttonPosition: {x: 0.5, y: 5, z: 7.5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1001 &501132799
@@ -2451,7 +2453,7 @@ MonoBehaviour:
   buttonPosition: {x: 1, y: 5, z: 7.5}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &690358921
@@ -2556,7 +2558,7 @@ MonoBehaviour:
   buttonPosition: {x: -2, y: 5, z: 8}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &702795803
@@ -3001,7 +3003,7 @@ MonoBehaviour:
   buttonPosition: {x: 2, y: 5, z: 7}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &774461288
@@ -3106,7 +3108,7 @@ MonoBehaviour:
   buttonPosition: {x: 0, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &775588775
@@ -3753,7 +3755,7 @@ MonoBehaviour:
   buttonPosition: {x: 2, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &951230315
@@ -4742,7 +4744,7 @@ MonoBehaviour:
   buttonPosition: {x: 0, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &1308098490
@@ -6330,7 +6332,7 @@ MonoBehaviour:
   buttonPosition: {x: -1, y: 5, z: 8}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &1852000349
@@ -6435,7 +6437,7 @@ MonoBehaviour:
   buttonPosition: {x: 1, y: 5, z: 6}
   buyButton: {fileID: 1288889826160334, guid: 31455ab38710add43a32bc9275b50f6f, type: 2}
   canvas: {fileID: 1535268719}
-  tower: {fileID: 0}
+  SpawnedTower: {fileID: 0}
   upgradeButton: {fileID: 1966587077263660, guid: cde48e905eeb0ec4eb6df53810e45252,
     type: 2}
 --- !u!1 &1869253002

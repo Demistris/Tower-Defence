@@ -23,6 +23,8 @@ public class Tower : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public bool IsUpgradedVersion;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);

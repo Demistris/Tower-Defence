@@ -6,6 +6,9 @@ public class BuildManager : MonoBehaviour {
 
     public static BuildManager instance;
 
+    public GameObject StandardTowerPrefab;
+    public GameObject UpgradedTowerPrefab;
+
     private void Awake()
     {
         if(instance != null)
@@ -15,19 +18,5 @@ public class BuildManager : MonoBehaviour {
         }
 
         instance = this;
-    }
-
-    public GameObject standardTowerPrefab;
-
-    private void Start()
-    {
-        towerToBuild = standardTowerPrefab;
-    }
-
-    private GameObject towerToBuild;
-
-    public GameObject GetTowerToBuild()
-    {
-        return towerToBuild;
     }
 }

@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buy : MonoBehaviour {
-
-    public GameObject standardTower;
+public class Buy : MonoBehaviour
+{
     public Vector3 positionOffset;
     public Spot targetSpot;
     BuildManager buildManager;
@@ -39,11 +38,10 @@ public class Buy : MonoBehaviour {
         PlayerStats.money -= 200;
 
 
-        GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
-        standardTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
+        GameObject towerToBuild = BuildManager.instance.StandardTowerPrefab;
+        GameObject spawnedStandardTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
         Destroy(gameObject);
 
-        //przypisuje prefab standardTower do public GameObject tower
-        targetSpot.tower = standardTower;
+        targetSpot.SpawnedTower = spawnedStandardTower;
     }
 }

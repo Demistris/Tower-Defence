@@ -266,3 +266,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1295191043711258, guid: be1d8b1e84eda104aad4bc25c78ab3b5,
     type: 2}
   firePoint: {fileID: 4611796906813150}
+  IsUpgradedVersion: 1
