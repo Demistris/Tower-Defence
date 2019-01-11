@@ -58,7 +58,7 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.gameIsOver)
+        if (GameManager.gameIsOver || GameManager.gameIsPaused)
         {
             this.enabled = false;
             return;

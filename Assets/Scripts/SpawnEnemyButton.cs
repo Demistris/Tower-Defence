@@ -14,6 +14,11 @@ public class SpawnEnemyButton : MonoBehaviour {
 
     private void Update()
     {
+        if (GameManager.gameIsPaused)
+        {
+            return;
+        }
+
         if (GameManager.gameIsOver)
         {
             this.enabled = false;
@@ -32,6 +37,17 @@ public class SpawnEnemyButton : MonoBehaviour {
 
     public void onClick()
     {
+        if(GameManager.gameIsPaused)
+        {
+            return;
+        }
+
+        if (GameManager.gameIsOver)
+        {
+            this.enabled = false;
+            return;
+        }
+
         StartCoroutine(Spawner.Instance.SpawnWave());
     }
 }

@@ -15,7 +15,7 @@ public class Buy : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.gameIsOver)
+        if (GameManager.gameIsOver || GameManager.gameIsPaused)
         {
             this.enabled = false;
             return;
@@ -24,7 +24,7 @@ public class Buy : MonoBehaviour
 
     public void onClick()
     {
-        if (GameManager.gameIsOver)
+        if (GameManager.gameIsOver || GameManager.gameIsPaused)
         {
             this.enabled = false;
             return;

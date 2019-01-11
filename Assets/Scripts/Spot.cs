@@ -30,7 +30,7 @@ public class Spot : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (GameManager.gameIsOver)
+        if (GameManager.gameIsOver || GameManager.gameIsPaused)
         {
             this.enabled = false;
             return;
@@ -78,7 +78,7 @@ public class Spot : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (GameManager.gameIsOver)
+        if (GameManager.gameIsOver || GameManager.gameIsPaused)
         {
             this.enabled = false;
             return;

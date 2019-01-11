@@ -5,11 +5,13 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static bool gameIsOver;
+    public static bool gameIsPaused;
     public GameObject gameOverUI;
 
     private void Start()
     {
         gameIsOver = false;
+        gameIsPaused = false;
     }
 
     void Update ()
@@ -17,7 +19,7 @@ public class GameManager : MonoBehaviour {
         if (gameIsOver)
             return;
 
-        if(Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("e"))
         {
             EndGame();
         }
