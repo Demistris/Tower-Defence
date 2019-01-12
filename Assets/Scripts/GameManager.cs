@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     {
         gameIsOver = false;
         gameIsPaused = false;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     void Update ()
