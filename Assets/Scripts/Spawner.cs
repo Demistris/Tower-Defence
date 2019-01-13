@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     public Transform spawnPoint;
     public static Spawner Instance;
 
+    public bool IsSpawning = false;
+
     public float timeBetweenWaves = 2f;
     private float countdown = 2f;
 
@@ -31,19 +33,21 @@ public class Spawner : MonoBehaviour
 
     public IEnumerator SpawnWave()
     {
+        IsSpawning = true;
+
         PlayerStats.rounds++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f);
         }
-
         waveIndex += 5;
+
+        IsSpawning = false;
     }
 
     void SpawnEnemy()
     {
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
-
 }

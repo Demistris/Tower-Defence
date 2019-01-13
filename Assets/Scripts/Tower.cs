@@ -58,13 +58,13 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.gameIsOver || GameManager.gameIsPaused)
+        if (GameManager.gameIsOver)
         {
             this.enabled = false;
             return;
         }
 
-        if (target == null)
+        if (target == null || GameManager.gameIsPaused)
         {
             return;
         }
