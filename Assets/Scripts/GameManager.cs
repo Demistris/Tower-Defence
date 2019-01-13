@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
-
+public class GameManager : MonoBehaviour
+{
     public static bool gameIsOver;
     public static bool gameIsPaused;
     public GameObject gameOverUI;
@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour {
     void Update ()
     {
         if (gameIsOver)
+        {
             return;
+        }
 
         if (Input.GetKeyDown("e"))
         {
