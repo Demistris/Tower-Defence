@@ -15,7 +15,7 @@ public class Tower : MonoBehaviour
 
     [Header("Unity Setup Fields")]
 
-    public string enemyTag = "EnemyEasy";
+    public string enemyTag = "Enemy";
 
     public Transform partToRotate;
     public float turnSpeed = 10f;

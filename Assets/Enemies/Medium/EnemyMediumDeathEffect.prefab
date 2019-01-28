@@ -9,44 +9,44 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1359701812524496}
+  m_RootGameObject: {fileID: 1283244778583324}
   m_IsPrefabAsset: 1
---- !u!1 &1359701812524496
+--- !u!1 &1283244778583324
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4288830482467060}
-  - component: {fileID: 198067032790986930}
-  - component: {fileID: 199848696758116290}
+  - component: {fileID: 4511923678997716}
+  - component: {fileID: 198198960641592370}
+  - component: {fileID: 199432297820339240}
   m_Layer: 0
-  m_Name: EnemyDeathEffect
-  m_TagString: Untagged
+  m_Name: EnemyMediumDeathEffect
+  m_TagString: EnemyMedium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4288830482467060
+--- !u!4 &4511923678997716
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1359701812524496}
+  m_GameObject: {fileID: 1283244778583324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42, y: 1.45, z: -61.096}
+  m_LocalPosition: {x: 89.61881, y: 0.5, z: -80.85643}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &198067032790986930
+--- !u!198 &198198960641592370
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1359701812524496}
+  m_GameObject: {fileID: 1283244778583324}
   serializedVersion: 5
   lengthInSec: 2
   simulationSpeed: 1
@@ -4631,13 +4631,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &199848696758116290
+--- !u!199 &199432297820339240
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1359701812524496}
+  m_GameObject: {fileID: 1283244778583324}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -4647,8 +4647,8 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: e93551c079115704393288cf13a17f33, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 981d30bc61d11bb4dace64bf7c78a2dd, type: 2}
+  - {fileID: 2100000, guid: 981d30bc61d11bb4dace64bf7c78a2dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

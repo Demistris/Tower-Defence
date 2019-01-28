@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
+    public Transform enemyEasyPrefab;
+    public Transform enemyMediumPrefab;
+    public Transform enemyHardPrefab;
+
     public Transform spawnPoint;
     public static Spawner Instance;
 
@@ -13,7 +16,7 @@ public class Spawner : MonoBehaviour
     public float timeBetweenWaves = 2f;
     private float countdown = 2f;
 
-    private int waveIndex = 10;
+    private int waveIndex = 15;
 
     private void Awake()
     {
@@ -34,20 +37,27 @@ public class Spawner : MonoBehaviour
     public IEnumerator SpawnWave()
     {
         IsSpawning = true;
-
         PlayerStats.rounds++;
+
         for (int i = 0; i < waveIndex; i++)
         {
-            SpawnEnemy();
+            SpawnEnemyEasy();
             yield return new WaitForSeconds(0.5f);
         }
-        waveIndex += 5;
 
-        IsSpawning = false;
+         IsSpawning = false;
     }
 
-    void SpawnEnemy()
+    void SpawnEnemyEasy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(enemyEasyPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+    void SpawnEnemyMedium()
+    {
+        Instantiate(enemyMediumPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+    void SpawnEnemyHard()
+    {
+        Instantiate(enemyHardPrefab, spawnPoint.position, spawnPoint.rotation);
     }
 }
