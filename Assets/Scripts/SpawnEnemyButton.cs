@@ -6,7 +6,6 @@ public class SpawnEnemyButton : MonoBehaviour {
 
     BuildManager buildManager;
     public GameObject button;
-    public int numberOfClicks = 0;
 
     void Start()
     {

@@ -30,13 +30,13 @@ public class Upgrade : MonoBehaviour
             return;
         }
 
-        if (PlayerStats.money < 150)
+        if (PlayerStats.money < 250)
         {
             Debug.Log("Not enough money to upgrade that!");
             return;
         }
 
-        PlayerStats.money -= 150;
+        PlayerStats.money -= 250;
 
         GameObject towerToBuild = BuildManager.instance.UpgradedTowerPrefab;
         GameObject spawnedUpgradedTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);

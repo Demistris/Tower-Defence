@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-    public float speed = 10f;
-    public float startHealth = 100;
+    public float speed;
+    public float startHealth;
     private float health;
-    public int value = 10;
+    public int value;
 
     public GameObject deathEffect;
 
