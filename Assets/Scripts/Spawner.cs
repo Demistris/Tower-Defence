@@ -4,19 +4,31 @@ using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform enemyEasyPrefab;
-    public Transform enemyMediumPrefab;
-    public Transform enemyHardPrefab;
+    [System.Serializable]
+    public class Wave
+    {
+        public EnemyGroup easy;
+        public EnemyGroup medium;
+        public EnemyGroup hard;
+    }
+
+    [System.Serializable]
+    public class EnemyGroup
+    {
+        public Transform enemy;
+        public int count;
+        public float interval;
+    }
+
+    public Wave[] waves;
+    private int nextWave = 0;
 
     public Transform spawnPoint;
     public static Spawner Instance;
-
     public bool IsSpawning = false;
 
     public float timeBetweenWaves = 2f;
     private float countdown = 2f;
-
-    private int waveIndex = 15;
 
     private void Awake()
     {
@@ -34,30 +46,51 @@ public class Spawner : MonoBehaviour
         countdown -= Time.deltaTime;
     }
 
-    public IEnumerator SpawnWave()
+    public void SpawnNextWave()
+    {
+        StartCoroutine(SpawnWave(waves[nextWave]));
+    }
+
+    public IEnumerator SpawnWave(Wave wave)
     {
         IsSpawning = true;
         PlayerStats.rounds++;
 
-        for (int i = 0; i < waveIndex; i++)
+        yield return SpawnEnemyGroup(wave.easy);
+        yield return SpawnEnemyGroup(wave.medium);
+        yield return SpawnEnemyGroup(wave.hard);
+
+        IsSpawning = false;
+        WaveComplited();
+    }
+
+    private IEnumerator SpawnEnemyGroup(EnemyGroup enemyGroup)
+    {
+        for (int i = 0; i < enemyGroup.count; i++)
         {
-            SpawnEnemyEasy();
-            yield return new WaitForSeconds(0.5f);
+            SpawnEnemy(enemyGroup.enemy);
+            yield return new WaitForSeconds(enemyGroup.interval);
         }
-
-         IsSpawning = false;
     }
 
-    void SpawnEnemyEasy()
+    void WaveComplited()
     {
-        Instantiate(enemyEasyPrefab, spawnPoint.position, spawnPoint.rotation);
+        countdown = timeBetweenWaves;
+
+        if(nextWave + 1 > waves.Length - 1)
+        {
+            nextWave = 0;
+            Debug.Log("Completed all waves.");
+        }
+        else
+        {
+            nextWave++;
+        }
     }
-    void SpawnEnemyMedium()
+
+    void SpawnEnemy (Transform _enemy)
     {
-        Instantiate(enemyMediumPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(_enemy, transform.position, transform.rotation);
     }
-    void SpawnEnemyHard()
-    {
-        Instantiate(enemyHardPrefab, spawnPoint.position, spawnPoint.rotation);
-    }
+
 }

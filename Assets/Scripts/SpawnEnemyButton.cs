@@ -49,6 +49,6 @@ public class SpawnEnemyButton : MonoBehaviour {
             return;
         }
 
-        StartCoroutine(Spawner.Instance.SpawnWave());
+        Spawner.Instance.SpawnNextWave();
     }
 }
