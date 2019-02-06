@@ -30,6 +30,8 @@ public class Spawner : MonoBehaviour
     public float timeBetweenWaves = 2f;
     private float countdown = 2f;
 
+    public GameManager gameManager;
+
     private void Awake()
     {
         Instance = this;
@@ -44,6 +46,7 @@ public class Spawner : MonoBehaviour
         }
 
         countdown -= Time.deltaTime;
+        CheckWinCondition();
     }
 
     public void SpawnNextWave()
@@ -77,15 +80,24 @@ public class Spawner : MonoBehaviour
     {
         countdown = timeBetweenWaves;
 
-        if(nextWave + 1 > waves.Length - 1)
+        nextWave++;
+    }
+
+    private void CheckWinCondition()
+    {
+        if (IsLastWave())
         {
-            nextWave = 0;
-            Debug.Log("Completed all waves.");
+            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            {
+                gameManager.WinLevel();
+                this.enabled = false;
+            }
         }
-        else
-        {
-            nextWave++;
-        }
+    }
+
+    public bool IsLastWave()
+    {
+        return nextWave >= waves.Length;
     }
 
     void SpawnEnemy (Transform _enemy)

@@ -300,6 +300,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fader: {fileID: 891150131}
+  levelButtons:
+  - {fileID: 1697276900}
+  - {fileID: 432324480}
+  - {fileID: 869089219}
+  - {fileID: 1526314741}
 --- !u!4 &138381210
 Transform:
   m_ObjectHideFlags: 0
@@ -543,6 +548,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379790204}
   m_CullTransparentMesh: 0
+--- !u!114 &432324480 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114557589963636636, guid: 915c39295b70be343962fd9333c3e3f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 80443800}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!224 &437444361 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224064483803454176, guid: 915c39295b70be343962fd9333c3e3f3,
@@ -967,6 +978,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 994c521f4818b824a909342a0a60c4b7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &869089219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114557589963636636, guid: 915c39295b70be343962fd9333c3e3f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 507863166}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &891150131 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114784871813855702, guid: 994c521f4818b824a909342a0a60c4b7,
@@ -1105,6 +1122,26 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level01
       objectReference: {fileID: 0}
+    - target: {fileID: 114720111275013974, guid: 915c39295b70be343962fd9333c3e3f3,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114720111275013974, guid: 915c39295b70be343962fd9333c3e3f3,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114720111275013974, guid: 915c39295b70be343962fd9333c3e3f3,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114720111275013974, guid: 915c39295b70be343962fd9333c3e3f3,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 915c39295b70be343962fd9333c3e3f3, type: 2}
   m_IsPrefabAsset: 0
@@ -1179,6 +1216,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1366468928}
   m_CullTransparentMesh: 0
+--- !u!114 &1526314741 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114557589963636636, guid: 915c39295b70be343962fd9333c3e3f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1933671058}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1590356345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1291,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1590356345}
   m_CullTransparentMesh: 0
+--- !u!114 &1697276900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114557589963636636, guid: 915c39295b70be343962fd9333c3e3f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1307456868}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1729781443
 GameObject:
   m_ObjectHideFlags: 0

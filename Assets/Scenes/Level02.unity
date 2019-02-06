@@ -1600,45 +1600,10 @@ MonoBehaviour:
       enemy: {fileID: 4913022807516438, guid: 593bb05e88a378e4b9b4b13974267954, type: 2}
       count: 0
       interval: 0
-  - easy:
-      enemy: {fileID: 4228019944980708, guid: 223d4c8d950ae1b48b3b235741fa4911, type: 2}
-      count: 10
-      interval: 1
-    medium:
-      enemy: {fileID: 4286676627296154, guid: c4a578af1b2bc6f449892dc13e4742ad, type: 2}
-      count: 3
-      interval: 2
-    hard:
-      enemy: {fileID: 4913022807516438, guid: 593bb05e88a378e4b9b4b13974267954, type: 2}
-      count: 1
-      interval: 3
-  - easy:
-      enemy: {fileID: 4228019944980708, guid: 223d4c8d950ae1b48b3b235741fa4911, type: 2}
-      count: 15
-      interval: 1
-    medium:
-      enemy: {fileID: 4286676627296154, guid: c4a578af1b2bc6f449892dc13e4742ad, type: 2}
-      count: 5
-      interval: 2
-    hard:
-      enemy: {fileID: 4913022807516438, guid: 593bb05e88a378e4b9b4b13974267954, type: 2}
-      count: 2
-      interval: 3
-  - easy:
-      enemy: {fileID: 4228019944980708, guid: 223d4c8d950ae1b48b3b235741fa4911, type: 2}
-      count: 15
-      interval: 1
-    medium:
-      enemy: {fileID: 4286676627296154, guid: c4a578af1b2bc6f449892dc13e4742ad, type: 2}
-      count: 10
-      interval: 2
-    hard:
-      enemy: {fileID: 4913022807516438, guid: 593bb05e88a378e4b9b4b13974267954, type: 2}
-      count: 5
-      interval: 3
   spawnPoint: {fileID: 1211034814}
   IsSpawning: 0
   timeBetweenWaves: 2
+  gameManager: {fileID: 359298790}
 --- !u!4 &359298787
 Transform:
   m_ObjectHideFlags: 0
@@ -1678,7 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad55d4d5f6f2a64683c1a258794e65c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 800
+  startMoney: 1000
   startLives: 10
   textMoney: {fileID: 1679288872}
   textLives: {fileID: 957652419}
@@ -1694,6 +1659,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 2047704863}
+  nextLevel: Level03
+  levelToUnlock: 3
+  sceneFader: {fileID: 21029346}
 --- !u!114 &359298791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5337,6 +5305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 160437177}
+  spawner: {fileID: 359298786}
 --- !u!1 &1869253002
 GameObject:
   m_ObjectHideFlags: 0

@@ -243,7 +243,7 @@ MonoBehaviour:
   speed: 13
   startHealth: 200
   value: 20
-  deathEffect: {fileID: 1359701812524496, guid: 31395c2dee0d5264db78bfe2e0047b17,
+  deathEffect: {fileID: 1283244778583324, guid: 3db0bdad3c6267e4e829552264080993,
     type: 2}
   healthBar: {fileID: 114661618278723756}
 --- !u!135 &135556010453774892

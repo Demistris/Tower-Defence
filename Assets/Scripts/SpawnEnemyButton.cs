@@ -6,6 +6,7 @@ public class SpawnEnemyButton : MonoBehaviour {
 
     BuildManager buildManager;
     public GameObject button;
+    public Spawner spawner;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class SpawnEnemyButton : MonoBehaviour {
             return;
         }
 
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        if (spawner.IsSpawning == false && spawner.IsLastWave() == false)
         {
             button.SetActive(true);
         }
