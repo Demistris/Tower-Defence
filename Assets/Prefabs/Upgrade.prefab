@@ -59,7 +59,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionOffset: {x: 0, y: 0, z: 0}
-  targetSpot: {fileID: 114322762448151892, guid: 1e6df9ac8b4789c4490d0b373d6d7ebf,
+  targetSpot: {fileID: 0}
+  textCantUpgrade: {fileID: 0}
+  upgradeSoundPrefab: {fileID: 82083815431091152, guid: 5596e50b59ea1a5408744ac8bbda38b2,
     type: 2}
 --- !u!114 &114546774179928344
 MonoBehaviour:

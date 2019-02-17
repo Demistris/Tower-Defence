@@ -120,10 +120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec49a1fdb51bff4e9e4480224ea9027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTower: {fileID: 1440473696532826, guid: 29a01d66f2a647d45bc4afcaa4bae32c,
-    type: 2}
   positionOffset: {x: 0, y: 1, z: 0}
   targetSpot: {fileID: 0}
+  buyingSoundPrefab: {fileID: 82083815431091152, guid: 5596e50b59ea1a5408744ac8bbda38b2,
+    type: 2}
 --- !u!114 &114984009714117818
 MonoBehaviour:
   m_ObjectHideFlags: 1

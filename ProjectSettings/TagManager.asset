@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - Music
   - Effect
+  - EnemyHard
+  - EnemyEasy
+  - EnemyMedium
+  - ButtonClick
   layers:
   - Default
   - TransparentFX

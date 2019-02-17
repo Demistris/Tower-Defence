@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Upgrade : MonoBehaviour
 {
     public Vector3 positionOffset;
     public Spot targetSpot;
     BuildManager buildManager;
+
+    public Text textCantUpgrade;
+
+    public AudioSource upgradeSoundPrefab;
 
     void Start ()
     {
@@ -38,6 +43,8 @@ public class Upgrade : MonoBehaviour
 
         PlayerStats.money -= 250;
 
+        PlayUpgradeSound();
+
         GameObject towerToBuild = BuildManager.instance.UpgradedTowerPrefab;
         GameObject spawnedUpgradedTower = (GameObject)Instantiate(towerToBuild, targetSpot.transform.position + positionOffset, targetSpot.transform.rotation);
         Destroy(gameObject);
@@ -45,5 +52,11 @@ public class Upgrade : MonoBehaviour
         Destroy(targetSpot.SpawnedTower);
 
         targetSpot.SpawnedTower = spawnedUpgradedTower;
+    }
+
+    public void PlayUpgradeSound()
+    {
+        AudioSource upgradeSoundInstance = Instantiate(upgradeSoundPrefab);
+        upgradeSoundInstance.Play();
     }
 }

@@ -16,8 +16,12 @@ public class EnemyMovement : MonoBehaviour {
 
     private Transform target;
     private int wavePointIndex = 0;
-	
-	void Start ()
+
+    private bool isDead = false;
+
+    public AudioSource losingLifeSoundPrefab;
+
+    void Start ()
     {
         target = Waypoints.points[0];
         health = startHealth;
@@ -29,7 +33,7 @@ public class EnemyMovement : MonoBehaviour {
 
         healthBar.fillAmount = health / startHealth;
 
-        if(health <= 0)
+        if(health <= 0 && !isDead)
         {
             Die();
         }
@@ -37,6 +41,8 @@ public class EnemyMovement : MonoBehaviour {
 
     void Die()
     {
+        isDead = true;
+
         PlayerStats.money += value;
 
         GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
@@ -76,7 +82,14 @@ public class EnemyMovement : MonoBehaviour {
 
     void EndPath()
     {
+        PlayLosingLifeSound();
         PlayerStats.lives--;
         Destroy(gameObject);
+    }
+
+    public void PlayLosingLifeSound()
+    {
+        AudioSource losingLifeSoundInstance = Instantiate(losingLifeSoundPrefab);
+        losingLifeSoundInstance.Play();
     }
 }

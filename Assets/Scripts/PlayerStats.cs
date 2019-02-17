@@ -13,6 +13,9 @@ public class PlayerStats : MonoBehaviour {
 
     public Text textMoney;
     public Text textLives;
+    public Text textWaves;
+
+    public Spawner spawner;
 
     public static int rounds;
 
@@ -23,6 +26,7 @@ public class PlayerStats : MonoBehaviour {
 
         textMoney.text = "Money: " + PlayerStats.money;
         textLives.text = "Lives: " + PlayerStats.lives;
+        textWaves.text = "Wave: " + spawner.countWaves + " / " + spawner.waves.Length;
 
         rounds = 0;
     }
@@ -36,5 +40,6 @@ public class PlayerStats : MonoBehaviour {
 
         textMoney.text = "Money: " + PlayerStats.money;
         textLives.text = "Lives: " + PlayerStats.lives;
+        textWaves.text = "Wave: " + spawner.countWaves + " / " + spawner.waves.Length;
     }
 }

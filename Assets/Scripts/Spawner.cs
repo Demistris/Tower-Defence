@@ -22,6 +22,7 @@ public class Spawner : MonoBehaviour
 
     public Wave[] waves;
     private int nextWave = 0;
+    public int countWaves = 0;
 
     public Transform spawnPoint;
     public static Spawner Instance;
@@ -56,6 +57,8 @@ public class Spawner : MonoBehaviour
 
     public IEnumerator SpawnWave(Wave wave)
     {
+        countWaves++;
+
         IsSpawning = true;
         PlayerStats.rounds++;
 

@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
     public static bool gameIsPaused;
     public GameObject gameOverUI;
 
-    public string nextLevel = "Level02";
-    public int levelToUnlock = 2;
+    public GameObject completeLevelUI;
 
-    public SceneFader sceneFader;
+    public AudioSource gameOverMusic;
+    public AudioSource WinningMusic;
 
     private void Start()
     {
@@ -27,11 +27,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown("e"))
-        {
-            EndGame();
-        }
-
 		if(PlayerStats.lives <= 0)
         {
             EndGame();
@@ -40,15 +35,15 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
+        gameOverMusic.Play();
         gameIsOver = true;
-
         gameOverUI.SetActive(true);
     }
 
     public void WinLevel()
     {
-        Debug.Log("Level won!");
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        sceneFader.FadeTo(nextLevel);
+        WinningMusic.Play();
+        gameIsOver = true;
+        completeLevelUI.SetActive(true);
     }
 }

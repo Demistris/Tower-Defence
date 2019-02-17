@@ -230,6 +230,8 @@ MonoBehaviour:
   deathEffect: {fileID: 1423532702844080, guid: 3251a2a7d5c48894bb62ce2c3a411334,
     type: 2}
   healthBar: {fileID: 114236204822556882}
+  losingLifeSoundPrefab: {fileID: 82283636535552248, guid: 844040d91c37b37499a357a79385cd4a,
+    type: 2}
 --- !u!114 &114750810796770956
 MonoBehaviour:
   m_ObjectHideFlags: 1

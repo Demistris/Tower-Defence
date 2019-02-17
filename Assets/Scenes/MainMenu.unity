@@ -201,7 +201,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2094171606}
+      - m_Target: {fileID: 1977963207}
         m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
@@ -429,7 +429,7 @@ MonoBehaviour:
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2094171606}
+      - m_Target: {fileID: 1977963207}
         m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
@@ -869,7 +869,7 @@ MonoBehaviour:
           m_StringArgument: Settings
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2094171606}
+      - m_Target: {fileID: 1977963207}
         m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1175,7 +1175,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2094171606}
+      - m_Target: {fileID: 1977963207}
         m_MethodName: PlayButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1709,9 +1709,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1977963204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281f57a5176e50a44be5599b9cacb335, type: 3}
+  m_Script: {fileID: 11500000, guid: a02b1cbdce4483b45851e70ef66f43c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonClick: {fileID: 1977963205}
 --- !u!1 &2094171602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,9 +1723,8 @@ GameObject:
   - component: {fileID: 2094171604}
   - component: {fileID: 2094171603}
   - component: {fileID: 2094171605}
-  - component: {fileID: 2094171606}
   m_Layer: 0
-  m_Name: Audio
+  m_Name: BackgroundMusic
   m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1738,7 +1738,8 @@ AudioSource:
   m_GameObject: {fileID: 2094171602}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243104096880351938, guid: d48ecbf64ae47dc468517abf2d8e3c96,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: b361f0f71aabe0c4aaec7f3606d83fe2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.15
@@ -1849,15 +1850,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0af2ddd7fb9f142ab325132a43835c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2094171606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2094171602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02b1cbdce4483b45851e70ef66f43c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonClick: {fileID: 1977963205}
