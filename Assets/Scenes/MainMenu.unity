@@ -1356,6 +1356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelToLoad: Level01
   sceneFader: {fileID: 1662618304}
+  musicGroup: {fileID: 243104096880351938, guid: d48ecbf64ae47dc468517abf2d8e3c96,
+    type: 2}
 --- !u!4 &1815735210
 Transform:
   m_ObjectHideFlags: 0
