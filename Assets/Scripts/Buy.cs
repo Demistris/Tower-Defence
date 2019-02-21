@@ -8,6 +8,9 @@ public class Buy : MonoBehaviour
     public Spot targetSpot;
     BuildManager buildManager;
 
+    public GameObject CantBuyText;
+    private GameObject spawnedCantBuyText;
+
     public AudioSource buyingSoundPrefab;
 
     void Start ()
@@ -34,7 +37,8 @@ public class Buy : MonoBehaviour
 
         if (PlayerStats.money < 200)
         {
-            Debug.Log("Not enough money to buy that!");
+            spawnedCantBuyText = Instantiate(CantBuyText, transform.position, targetSpot.transform.rotation, GameManager.Instance.canvas.transform);
+            StartCoroutine(DeleteInfoText());
             return;
         }
 
@@ -47,6 +51,12 @@ public class Buy : MonoBehaviour
         Destroy(gameObject);
 
         targetSpot.SpawnedTower = spawnedStandardTower;
+    }
+
+    private IEnumerator DeleteInfoText()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(spawnedCantBuyText);
     }
 
     public void PlayBuyingSound()

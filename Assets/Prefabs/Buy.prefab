@@ -121,7 +121,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionOffset: {x: 0, y: 1, z: 0}
+  positionCantBuyText: {x: 20, y: 20, z: 20}
   targetSpot: {fileID: 0}
+  CantBuyText: {fileID: 1950868335567070, guid: 4a255de4dc1267447b562569c6760d05,
+    type: 2}
   buyingSoundPrefab: {fileID: 82083815431091152, guid: 5596e50b59ea1a5408744ac8bbda38b2,
     type: 2}
 --- !u!114 &114984009714117818

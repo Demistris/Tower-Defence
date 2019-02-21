@@ -887,6 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1065289742}
   - component: {fileID: 1065289743}
+  - component: {fileID: 1065289744}
   m_Layer: 5
   m_Name: ToggleSound
   m_TagString: Untagged
@@ -954,10 +955,35 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1065289744}
+        m_MethodName: IsSoundOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!114 &1065289744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065289741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc7d70715df9254b92c89c6f5ca1a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundGroup: {fileID: 243672452260537212, guid: d48ecbf64ae47dc468517abf2d8e3c96,
+    type: 2}
+  toggle: {fileID: 1065289743}
 --- !u!1 &1161733836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1098,8 @@ AudioSource:
   m_GameObject: {fileID: 1654377239}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243672452260537212, guid: d48ecbf64ae47dc468517abf2d8e3c96,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: bfa1f4ad4c6a61d408652c07bd8c996e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

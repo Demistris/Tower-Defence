@@ -12,6 +12,9 @@ public class MainMenu : MonoBehaviour
     private const string IS_MUSIC_ON = "IsMusicOn";
     public AudioMixerGroup musicGroup;
 
+    private const string IS_SOUND_ON = "IsSoundOn";
+    public AudioMixerGroup soundGroup;
+
     private void Start()
     {
         if (PlayerPrefs.GetInt(IS_MUSIC_ON) == 1)
@@ -21,6 +24,15 @@ public class MainMenu : MonoBehaviour
         else
         {
             musicGroup.audioMixer.SetFloat("musicVolume", -80f);
+        }
+
+        if (PlayerPrefs.GetInt(IS_SOUND_ON) == 1)
+        {
+            soundGroup.audioMixer.SetFloat("soundVolume", 0f);
+        }
+        else
+        {
+            soundGroup.audioMixer.SetFloat("soundVolume", -80f);
         }
     }
 

@@ -9,7 +9,8 @@ public class Upgrade : MonoBehaviour
     public Spot targetSpot;
     BuildManager buildManager;
 
-    public Text textCantUpgrade;
+    public GameObject CantUpgradeText;
+    private GameObject spawnedCantUpgradeText;
 
     public AudioSource upgradeSoundPrefab;
 
@@ -37,7 +38,8 @@ public class Upgrade : MonoBehaviour
 
         if (PlayerStats.money < 250)
         {
-            Debug.Log("Not enough money to upgrade that!");
+            spawnedCantUpgradeText = Instantiate(CantUpgradeText, transform.position, targetSpot.transform.rotation, GameManager.Instance.canvas.transform);
+            StartCoroutine(DeleteInfoText());
             return;
         }
 
@@ -52,6 +54,12 @@ public class Upgrade : MonoBehaviour
         Destroy(targetSpot.SpawnedTower);
 
         targetSpot.SpawnedTower = spawnedUpgradedTower;
+    }
+
+    private IEnumerator DeleteInfoText()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(spawnedCantUpgradeText);
     }
 
     public void PlayUpgradeSound()

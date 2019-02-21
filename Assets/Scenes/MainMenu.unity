@@ -1358,6 +1358,8 @@ MonoBehaviour:
   sceneFader: {fileID: 1662618304}
   musicGroup: {fileID: 243104096880351938, guid: d48ecbf64ae47dc468517abf2d8e3c96,
     type: 2}
+  soundGroup: {fileID: 243672452260537212, guid: d48ecbf64ae47dc468517abf2d8e3c96,
+    type: 2}
 --- !u!4 &1815735210
 Transform:
   m_ObjectHideFlags: 0
@@ -1603,7 +1605,8 @@ AudioSource:
   m_GameObject: {fileID: 1977963204}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243672452260537212, guid: d48ecbf64ae47dc468517abf2d8e3c96,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: bfa1f4ad4c6a61d408652c07bd8c996e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
